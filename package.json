@@ -1,0 +1,25 @@
+{
+  "name": "@samuellouf/dialogs",
+  "version": "1.0.0",
+  "description": "A JS module to show dialogs.",
+  "main": "src/dialogs.js",
+  "scripts": {
+    "test": "node tests/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuellouf/dialogs.git"
+  },
+  "keywords": [
+    "dialogs"
+  ],
+  "author": "SamuelLouf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samuellouf/dialogs/issues"
+  },
+  "homepage": "https://github.com/samuellouf/dialogs#readme",
+  "directories": {
+    "test": "tests"
+  }
+}
