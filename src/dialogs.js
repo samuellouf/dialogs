@@ -63,8 +63,8 @@ async function getDialogs(){
  * @param {0|1|2|3|4|5|16|17|18|19|20|21|32|33|34|35|36|37|48|49|50|51|52|53|64|65|66|67|68|69} key - The key of the message box.
  */
 async function msgbox(title, body, key){
-  await fs.writeFileSync('msgbox.vbs', `WScript.StdOut.WriteLine msgbox(${stringifyVB(body)} ,${String(key)}, ${stringifyVB(title)})`, {encoding: 'utf-8'});
-  return (await exec('cscript msgbox.vbs', { encoding: 'utf-8' })).stdout.split('\n')[3];
+  await fs.writeFileSync(path.join(__dirname, 'msgbox.vbs'), `WScript.StdOut.WriteLine msgbox(${stringifyVB(body)} ,${String(key)}, ${stringifyVB(title)})`, {encoding: 'utf-8'});
+  return (await exec('cscript ' + path.join(__dirname, 'msgbox.vbs'), { encoding: 'utf-8' })).stdout.split('\n')[3];
 }
 
 /**
